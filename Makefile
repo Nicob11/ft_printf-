@@ -3,8 +3,7 @@ INCLUDE = libftprintf.h
 SRC = ft_printf.c \
 	  ft_putchar.c \
 	  ft_putstr.c \
-	  ft_putnbr.c \
-	  ft_putendl.c
+	  ft_putnbr.c
 OBJ = ${SRC:.c = .o}
 CC = gcc
 RM = rm -f
