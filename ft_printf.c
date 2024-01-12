@@ -6,13 +6,13 @@
 /*   By: febasma <febasma@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 16:52:58 by febasma           #+#    #+#             */
-/*   Updated: 2023/11/08 16:58:01 by febasma          ###   ########.fr       */
+/*   Updated: 2024/01/12 21:46:26 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-int ft_printf(char const *format, ...)
+int	ft_printf(char const *s, ...)
 {
-    return (0);
+	return (0);
 }

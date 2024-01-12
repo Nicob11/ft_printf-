@@ -6,15 +6,14 @@
 /*   By: febasma <febasma@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 14:31:30 by febasma           #+#    #+#             */
-/*   Updated: 2024/01/11 14:36:19 by febasma          ###   ########.fr       */
+/*   Updated: 2024/01/12 21:47:00 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-int     ft_putchar(char c)
+int	ft_putchar(char c)
 {
-    write(1, &c, 1);
-    return(1);
-
+	write(1, &c, 1);
+	return (1);
 }

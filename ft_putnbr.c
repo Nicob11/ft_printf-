@@ -6,29 +6,29 @@
 /*   By: febasma <febasma@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 14:42:42 by febasma           #+#    #+#             */
-/*   Updated: 2024/01/11 14:46:22 by febasma          ###   ########.fr       */
+/*   Updated: 2024/01/12 21:47:59 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-void ft_putnbr(int n)
+void	ft_putnbr(int n)
 {
-    if (n == -2147483648)
-    {
-        ft_putstr("-2147483648");
-        return ;
-    }
-    if (n < 0)
-    {
-        ft_putchar('-');
-        n = -n;
-    }
-    if (n >= 10)
-    {
-        ft_putnbr(n / 10);
-        ft_putnbr(n % 10);
-    }
-    else
-        ft_putchar(n + '0');
+	if (n == -2147483648)
+	{
+		ft_putstr("-2147483648");
+		return ;
+	}
+	if (n < 0)
+	{
+		ft_putchar('-');
+		n = -n;
+	}
+	if (n >= 10)
+	{
+		ft_putnbr(n / 10);
+		ft_putnbr(n % 10);
+	}
+	else
+		ft_putchar(n + '0');
 }
