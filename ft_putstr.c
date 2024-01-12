@@ -12,7 +12,7 @@
 
 #include "libftprintf.h"
 
-void ft_putstr(char *s)
+int     ft_putstr(char *s)
 {
     int i;
 
@@ -22,4 +22,5 @@ void ft_putstr(char *s)
         ft_putchar(s[i]);
         i++;
     }
+    return(i);
 }

@@ -17,10 +17,9 @@
 # include <unistd.h>
 # include <stdlib.h>
 
-int        ft_printf(char const *, ...);
-
-void        ft_putchar(char c);
-void        ft_putstr(char *s);
-void        ft_putnbr(int n);
+int     ft_printf(char const *, ...);
+int     ft_putchar(char c);
+int     ft_putstr(char *s);
+void    ft_putnbr(int n);
 
 #endif
