@@ -6,23 +6,22 @@
 /*   By: febasma <febasma@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 14:38:00 by febasma           #+#    #+#             */
-/*   Updated: 2024/01/12 21:47:43 by febasma          ###   ########.fr       */
+/*   Updated: 2024/01/14 22:00:22 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-int	ft_putstr(char *s)
+int	ft_putstr(char *str)
 {
-	int	i;
+	int	size;
 
-	i = 0;
-	if (s == '\0')
+	size = 0;
+	if (str == 0)
 		ft_putstr("(null)");
-	while (s[i])
+	while (str[size])
 	{
-		ft_putchar(s[i]);
-		i++;
+		size += ft_putchar(str[size]);
 	}
-	return (i);
+	return (size);
 }
