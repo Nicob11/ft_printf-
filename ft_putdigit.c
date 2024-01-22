@@ -1,34 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_putdigit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: febasma <febasma@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 14:42:42 by febasma           #+#    #+#             */
-/*   Updated: 2024/01/14 21:10:55 by febasma          ###   ########.fr       */
+/*   Updated: 2024/01/22 16:50:22 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-void	ft_putnbr(int n)
+int	ft_putdigit(long n, int base)
 {
-	if (n == -2147483648)
-	{
-		ft_putstr("-2147483648");
-		return ;
-	}
+	int count;
+	char *symbol;
+
+	count = 0;
+	symbol = "0123456789abcdef";
 	if (n < 0)
 	{
 		ft_putchar('-');
-		n = -n;
+		ft_putdigit(-n, base);
 	}
-	if (n >= 10)
-	{
-		ft_putnbr(n / 10);
-		ft_putnbr(n % 10);
-	}
+	else if (n < base)
+		ft_putchar(symbol[n]);
 	else
-		ft_putchar(n + '0');
+	{
+		ft_putdigit(n / base, base);
+		ft_putdigit(n % base, base);
+	}
+	return (count);
 }

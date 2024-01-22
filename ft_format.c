@@ -23,6 +23,12 @@ int	ft_format(char format, va_list ap)
 		count += ft_putstr(va_arg(ap, char *));
 	else if (format == '%')
 		count += ft_putchar('%');
+	else if (format == 'i')
+		count += ft_putdigit((long)(va_arg(ap, int)), 10);
+	else if (format == 'd')
+		count += ft_putdigit((long)(va_arg(ap, int)), 10);
+	else if (format == 'x')
+		count += ft_putdigit((long)(va_arg(ap, int)), 16);
 	return (count);
 
 }

@@ -6,7 +6,7 @@
 /*   By: febasma <febasma@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 16:52:58 by febasma           #+#    #+#             */
-/*   Updated: 2024/01/22 15:55:53 by febasma          ###   ########.fr       */
+/*   Updated: 2024/01/22 16:51:04 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	main(void)
 	int count;
 
 	count = 0;
-	count = ft_printf("hello %%, %s  ", "world");
-	printf("%d", count);
+	count = ft_printf("ft_printf %x, %d, %i\n", -42, -42, -42);
+	printf("printf %x, %d, %i\n", -42, -42, -42);
 	return (0);
 }
