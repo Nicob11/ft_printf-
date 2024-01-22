@@ -1,4 +1,4 @@
-# ft_printf
+# ft_printf 42
 
 ## Descripción
 `ft_printf` es una implementación personalizada de la función `printf` en el lenguaje de programación C. Esta función permite formatear y enviar texto a la salida estándar de una manera similar a la función original `printf` de la biblioteca estándar de C.
