@@ -30,5 +30,4 @@ int	ft_format(char format, va_list ap)
 	else if (format == 'x')
 		count += ft_putdigit((long)(va_arg(ap, int)), 16);
 	return (count);
-
 }

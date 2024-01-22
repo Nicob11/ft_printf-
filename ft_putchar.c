@@ -6,7 +6,7 @@
 /*   By: febasma <febasma@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 14:31:30 by febasma           #+#    #+#             */
-/*   Updated: 2024/01/22 15:17:27 by febasma          ###   ########.fr       */
+/*   Updated: 2024/01/22 20:34:00 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 int	ft_putchar(int c)
 {
-	return write(1, &c, 1);
+	return (write(1, &c, 1));
 }

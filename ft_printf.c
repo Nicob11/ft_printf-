@@ -6,7 +6,7 @@
 /*   By: febasma <febasma@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 16:52:58 by febasma           #+#    #+#             */
-/*   Updated: 2024/01/22 16:51:04 by febasma          ###   ########.fr       */
+/*   Updated: 2024/01/22 20:33:36 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	ft_printf(char const *str, ...)
 	{
 		if (*str == '%')
 			count += ft_format(*(++str), ap);
-		else 
+		else
 			ft_putchar(*str);
 		str++;
 	}

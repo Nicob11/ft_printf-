@@ -6,7 +6,7 @@
 /*   By: febasma <febasma@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 14:42:42 by febasma           #+#    #+#             */
-/*   Updated: 2024/01/22 16:50:22 by febasma          ###   ########.fr       */
+/*   Updated: 2024/01/22 20:34:08 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_putdigit(long n, int base)
 {
-	int count;
-	char *symbol;
+	int		count;
+	char	*symbol;
 
 	count = 0;
 	symbol = "0123456789abcdef";
