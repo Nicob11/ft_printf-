@@ -18,17 +18,11 @@ int	ft_format(char format, va_list ap)
 
 	count = 0;
 	if (format == 'c')
-	{
 		count += ft_putchar(va_arg(ap, int));
-	}
 	else if (format == 's')
-	{
 		count += ft_putstr(va_arg(ap, char *));
-	}
 	else if (format == '%')
-	{
 		count += ft_putchar('%');
-	}
 	return (count);
 
 }
