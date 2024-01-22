@@ -24,10 +24,10 @@ int	ft_format(char format, va_list ap)
 	else if (format == '%')
 		count += ft_putchar('%');
 	else if (format == 'i')
-		count += ft_putdigit((long)(va_arg(ap, int)), 10);
+		count += ft_putdigit((long)(va_arg(ap, int)), 10, 'i');
 	else if (format == 'd')
-		count += ft_putdigit((long)(va_arg(ap, int)), 10);
-	else if (format == 'x')
-		count += ft_putdigit((long)(va_arg(ap, int)), 16);
+		count += ft_putdigit((long)(va_arg(ap, int)), 10, 'd');
+	else if (format == 'x' || format == 'X')
+		count += ft_putdigit((long)(va_arg(ap, int)), 16, format);
 	return (count);
 }

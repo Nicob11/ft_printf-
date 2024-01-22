@@ -6,30 +6,36 @@
 /*   By: febasma <febasma@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 14:42:42 by febasma           #+#    #+#             */
-/*   Updated: 2024/01/22 20:34:08 by febasma          ###   ########.fr       */
+/*   Updated: 2024/01/22 21:57:32 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-int	ft_putdigit(long n, int base)
+int	ft_putdigit(long n, int base, char format)
 {
 	int		count;
-	char	*symbol;
+	char	*symbol_lower;
+	char	*symbol_upper;
 
 	count = 0;
-	symbol = "0123456789abcdef";
+	symbol_lower = "0123456789abcdef";
+	symbol_upper = "0123456789ABCDEF";
 	if (n < 0)
 	{
-		ft_putchar('-');
-		ft_putdigit(-n, base);
+		count += ft_putchar('-');
+		count += ft_putdigit(-n, base, format);
 	}
+	else if (n < base && format == 'x')
+		count += ft_putchar(symbol_lower[n]);
+	else if (n < base && format == 'X')
+		count += ft_putchar(symbol_upper[n]);
 	else if (n < base)
-		ft_putchar(symbol[n]);
+		count += ft_putchar(n + '0');
 	else
 	{
-		ft_putdigit(n / base, base);
-		ft_putdigit(n % base, base);
+		count += ft_putdigit((n / base), base, format);
+		count += ft_putdigit((n % base), base, format);
 	}
 	return (count);
 }

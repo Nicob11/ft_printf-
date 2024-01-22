@@ -6,7 +6,7 @@
 /*   By: febasma <febasma@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 16:49:30 by febasma           #+#    #+#             */
-/*   Updated: 2024/01/22 20:34:20 by febasma          ###   ########.fr       */
+/*   Updated: 2024/01/22 21:38:18 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 int	ft_printf(char const *str, ...);
 int	ft_putchar(int c);
 int	ft_putstr(char *str);
-int	ft_putdigit(long n, int base);
+int	ft_putdigit(long n, int base, char format);
 int	ft_format(char format, va_list ap);
 
 #endif

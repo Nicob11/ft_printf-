@@ -6,7 +6,7 @@
 /*   By: febasma <febasma@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 14:38:00 by febasma           #+#    #+#             */
-/*   Updated: 2024/01/22 20:34:14 by febasma          ###   ########.fr       */
+/*   Updated: 2024/01/22 21:25:45 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 int	ft_putstr(char *str)
 {
-	int	size;
+	int	count;
 
-	size = 0;
+	count = 0;
 	if (str == 0)
-		ft_putstr("(null)");
-	while (str[size])
+		count += ft_putstr("(null)");
+	while (str[count])
 	{
-		size += ft_putchar(str[size]);
+		count += ft_putchar(str[count]);
 	}
-	return (size);
+	return (count);
 }
