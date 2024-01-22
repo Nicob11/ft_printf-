@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_what_format.c                                   :+:      :+:    :+:   */
+/*   ft_format.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: febasma <febasma@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,14 +12,23 @@
 
 #include "libftprintf.h"
 
-int	ft_what_format(va_list ap, const char format)
+int	ft_format(char format, va_list ap)
 {
-	int count;
+	int	count;
 
 	count = 0;
 	if (format == 'c')
+	{
 		count += ft_putchar(va_arg(ap, int));
+	}
 	else if (format == 's')
+	{
 		count += ft_putstr(va_arg(ap, char *));
+	}
+	else if (format == '%')
+	{
+		count += ft_putchar('%');
+	}
 	return (count);
+
 }

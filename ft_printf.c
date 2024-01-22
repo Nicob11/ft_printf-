@@ -6,7 +6,7 @@
 /*   By: febasma <febasma@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 16:52:58 by febasma           #+#    #+#             */
-/*   Updated: 2024/01/14 22:25:09 by febasma          ###   ########.fr       */
+/*   Updated: 2024/01/22 15:40:57 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,14 @@ int	ft_printf(char const *str, ...)
 	va_start(ap, str);
 	while (*str)
 	{
-		if (str[i] == '%')
+		if (*str == '%')
 		{
-			count += ft_what_format(ap, str[i + 1]);
-			i++;
+			count += ft_format(*(++str), ap);
 		}
-		else
-			count += ft_putchar(str[i]);
+		else 
+		{
+			ft_putchar(*str);
+		}
 		str++;
 	}
 	va_end(ap);
@@ -40,6 +41,8 @@ int	main(void)
 {
 	int count;
 
-	count = ft_printf("hello %c, %s  ", "n", "world");
+	count = 0;
+	count = ft_printf("hello %%, %s  ", "world");
+	printf("%d", count);
 	return (0);
 }
