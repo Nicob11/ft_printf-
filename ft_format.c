@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_format(char format, va_list ap)
 {
@@ -18,16 +18,20 @@ int	ft_format(char format, va_list ap)
 
 	count = 0;
 	if (format == 'c')
-		count += ft_putchar(va_arg(ap, int));
+		count += ft_put_char(va_arg(ap, int));
 	else if (format == 's')
-		count += ft_putstr(va_arg(ap, char *));
-	else if (format == '%')
-		count += ft_putchar('%');
-	else if (format == 'i')
-		count += ft_putdigit((long)(va_arg(ap, int)), 10, 'i');
+		count += ft_put_str(va_arg(ap, char *));
+	else if (format == 'p')
+		count += ft_put_pointer(va_arg(ap, unsigned long long int), 'x');
 	else if (format == 'd')
-		count += ft_putdigit((long)(va_arg(ap, int)), 10, 'd');
+		count += ft_put_digit((va_arg(ap, int)));
+	else if (format == 'i')
+		count += ft_put_digit(va_arg(ap, int));
+	else if (format == 'u')
+		count += ft_put_unsigned(va_arg(ap, unsigned int));
 	else if (format == 'x' || format == 'X')
-		count += ft_putdigit((long)(va_arg(ap, int)), 16, format);
+		count += ft_put_hexa(va_arg(ap, unsigned int), format);
+	else if (format == '%')
+		count += ft_put_char('%');
 	return (count);
 }
